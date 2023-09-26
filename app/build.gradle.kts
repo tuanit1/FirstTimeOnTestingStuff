@@ -50,6 +50,7 @@ dependencies {
     implementation("com.google.android.material:material:1.8.0")
     implementation("androidx.fragment:fragment-ktx:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    testImplementation("junit:junit:4.12")
 
     // Room
     val roomVersion = "2.5.2"
@@ -75,6 +76,8 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     testImplementation("com.google.truth:truth:1.1.4")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
 
     // Instrumented test
     androidTestImplementation("com.google.truth:truth:1.1.4")

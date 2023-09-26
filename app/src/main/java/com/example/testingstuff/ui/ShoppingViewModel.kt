@@ -16,6 +16,7 @@ import javax.inject.Inject
 class ShoppingViewModel @Inject constructor(
     private val repository: ShoppingRepository
 ) : ViewModel() {
+
     val shoppingItemsViewState = repository.observeAllShoppingItems()
     val totalPriceViewState = repository.observeTotalPrice()
 
@@ -31,7 +32,7 @@ class ShoppingViewModel @Inject constructor(
     private val _deleteShoppingItemStatus = MutableLiveData<Resource<ShoppingItem>>()
     val deleteShoppingItemStatus: LiveData<Resource<ShoppingItem>> = _deleteShoppingItemStatus
 
-    fun setCurlImageUrl(shoppingItem: ShoppingItem) = viewModelScope.launch {
+    fun setCurImageUrl(shoppingItem: ShoppingItem) = viewModelScope.launch {
         repository.deleteShoppingItem(shoppingItem)
     }
 
