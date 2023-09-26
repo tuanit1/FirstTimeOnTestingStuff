@@ -22,6 +22,9 @@ interface ShoppingDao {
     @Query("SELECT SUM(price * amount) FROM shopping_items")
     fun observeTotalPrice(): LiveData<Float>
 
+    @Query("SELECT SUM(price * amount) FROM shopping_items")
+    fun getTotalPrice(): Float
+
     @Query("SELECT * FROM shopping_items WHERE id == :id")
     suspend fun findById(id: Int): ShoppingItem
 }
